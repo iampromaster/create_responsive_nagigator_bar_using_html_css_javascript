@@ -1,0 +1,71 @@
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3em 8em;
+  background: orangered;
+  display: flex;
+  justify-content: space-between;
+}
+
+#menu-icon {
+  font-size: 42px;
+  color: white;
+  display: none;
+}
+
+.logo {
+  font-size: 32px;
+  color: white;
+  font-weight: 800;
+}
+.navbar a {
+  font-size: 20px;
+  color: white;
+  margin-left: 4em;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+.navbar a:hover {
+  border-bottom: 3px solid white;
+}
+@media (max-width: 950px) {
+  #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    border: 5px solid orangered;
+    border-bottom-left-radius: 1rem;
+    padding: 1rem 3%;
+    background: white;
+    display: none;
+  }
+  .navbar.active {
+    display: block;
+  }
+  .navbar a {
+    display: block;
+    color: orangered;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  .navbar a:hover {
+    border-bottom: 3px solid orangered;
+  }
+}
